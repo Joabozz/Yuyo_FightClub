@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*
+    Navbar
+*/
+
+header{
+    background-color: white;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.logo img{
+    object-fit: contain;
+    width: 40%;
+    aspect-ratio: 3/4;
+    margin-top: 5px;
+}
+
+.navbar{
+    width: 100%;
+    height: 110px;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+
+.navbar .togle_btn{
+    display: none;
+    height: 50px;
+    width: 50px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 30%;
+}
+
+.navbar .togle_btn:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #1B1B1B;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+li a::after{
+    content: "";
+    display: block;
+    background-color: red;
+    height: 3px;
+    width: 0;
+    transition: 0.3s;
+}
+
+li a:hover::after{
+    width: 100%;
+}
+
+/*
+DropDown
+*/
+.dropdown{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    width: 300px;
+    height: 0;
+    top: 95px;
+    background: rgba(255, 255, 255, 1);
+    opacity: 0.8;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown.open{
+    height: 130px;
+}
+
+.dropdown li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/*
+dropdown end
+*/
+/* 
+.container{
+    display: grid;
+    width: 100%;
+} */
+
+.banner{
+    background-image: url("images/militar.png");
+    border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	/* position: relative; */
+	overflow: hidden;
+	background-size: cover;
+	background-position: center 500px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* display: flex;
+    width: 100%;
+    height: 715px;
+    background-size: cover;
+    background-position: 0px -140px;
+    background-repeat: no-repeat;
+    background-image: url('images/militar.jpg'); */
+}
+/* 
+.section2{
+    width: 100%;
+    padding: 0px 15px;
+} */
+
+.section2 .row2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.encuentranos{
+    min-width: 700px;
+}
+
+.row3{
+    margin-top: 6em;
+}
+.icons i{
+    margin-top: 30px;
+}
+
+.mapa{
+    padding: 1em;
+}
+
+iframe{
+    width: 100%;
+}
+
+/*
+footer
+*/
+.footer-clean {
+    padding:15px 0 100px 0;
+    margin-top: 50px;
+    background-color:#423d3d;
+    color:#FFF;
+}
+
+
+.footer-clean .item.social {
+    text-align:center;
+}
+  
+  
+.footer-clean .item.social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin-left:10px;
+    margin-top:22px;
+    color:inherit;
+    opacity:0.75;
+}
+  
+.footer-clean .item.social > a:hover {
+    opacity:0.9;
+}
+  
+  
+.footer-clean .copyright {
+    margin-top:14px;
+    margin-bottom:0;
+    font-size:13px;
+    opacity:0.6;
+}
+
+/*
+end footer
+*/
+
+/*
+responsive
+*/
+@media screen and (max-width: 1000px) {
+    .navbar .links{
+        display: none;
+    }
+
+    .logo img{
+        object-fit: contain;
+        width: 35%;
+        aspect-ratio: 3/4;
+        margin-top: 5px;
+    }
+
+    .navbar{
+        height: 90px;
+    }
+
+    .navbar .togle_btn{
+        display: block;
+    }
+
+    .dropdown{
+        display: block;
+    }
+
+    
+    .banner{
+        background-position: center center;
+    }
+    
+    .section2 .row2{
+        flex-direction:column;
+
+    }
+
+    .encuentranos{
+        min-width: 100%;
+    }
+
+
+    .row3{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .footer-clean .item.social {
+        text-align:center;
+    }
+    
+    
+}
+
+@media screen and (max-width: 576px){
+    .dropdown{
+        left: 2rem;
+        width: unset;
+    }
+    
+    .banner{
+        width: 100%;
+        overflow-wrap: break-word;
+        font-size: 12px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+
+
+
+
+
+}
+

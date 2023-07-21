@@ -1,0 +1,427 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*
+    Navbar
+*/
+
+header{
+    background-color: white;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.logo img{
+    object-fit: contain;
+    width: 40%;
+    aspect-ratio: 3/4;
+    margin-top: 5px;
+}
+
+.navbar{
+    width: 100%;
+    height: 110px;
+    padding: 0 2rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+
+.navbar .togle_btn{
+    display: none;
+    height: 50px;
+    width: 50px;
+    color: #343F4F;
+    cursor: pointer;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 30%;
+}
+
+.navbar .togle_btn:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #1B1B1B;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+li a::after{
+    content: "";
+    display: block;
+    background-color: red;
+    height: 3px;
+    width: 0;
+    transition: 0.3s;
+}
+
+li a:hover::after{
+    width: 100%;
+}
+
+/*
+DropDown
+*/
+.dropdown{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    width: 300px;
+    height: 0;
+    top: 95px;
+    background: rgba(255, 255, 255, 1);
+    opacity: 0.8;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown.open{
+    height: 130px;
+}
+
+.dropdown li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/*
+dropdown end
+*/
+
+.container{
+    display: grid;
+    width: 100%;
+}
+
+.section1{
+    display: flex;
+    flex-direction: row;
+    background-color: #343F4F;
+    width: 100%;
+}
+
+.section1 .entrenamientoImg{
+    width: 50%;
+    height: 100%;
+}
+
+.section1 .entrenamientoImg img{
+    width: 100%;
+    height: 100%;
+}
+
+.section1 .acercaDe{
+    width: 50%;
+    height: 100%;
+    color: white;
+    background-color: #343F4F;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 90px 100px 90px;
+}
+
+.section1 h1{
+    padding-bottom: 20px;
+    font-size: 3rem;
+    padding-bottom: 3rem;
+}
+
+.section1 p{
+    font-size: 1em;
+    font-weight: normal;
+    padding-bottom: 50px;
+}
+/*
+btn contact
+*/
+
+.btn {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1em 2.5em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+/*
+end btn
+*/
+
+
+
+.section2{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin-top: 50px;
+}
+
+
+.section2 .instructores{
+    padding: 30px 20%;
+    text-align: center;
+}
+
+.instructores h2{
+    padding-bottom: 15px;
+}
+
+
+.section2 .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.julio{
+    text-align: center;
+}
+
+.julio img{
+    width: 70%;
+    border-radius: 40%;
+}
+
+.chele{
+    text-align: center;
+}
+
+.chele img{
+    width: 70%;
+    border-radius: 40%;
+}
+
+.section3{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    margin-top: 150px;
+
+}
+
+.section3 .metas{
+    padding-bottom: 50px;
+}
+
+.section3 .row1{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.3rem;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+.section3 .row2{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 1.3rem;
+    width: 80%;
+    justify-content: space-evenly;
+}
+
+/*
+footer
+*/
+.footer-clean {
+    padding:15px 0 100px 0;
+    margin-top: 50px;
+    background-color:#423d3d;
+    color:#FFF;
+}
+
+
+.footer-clean .item.social {
+    text-align:center;
+}
+  
+  
+.footer-clean .item.social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ccc;
+    margin-left:10px;
+    margin-top:22px;
+    color:inherit;
+    opacity:0.75;
+}
+  
+.footer-clean .item.social > a:hover {
+    opacity:0.9;
+}
+  
+  
+.footer-clean .copyright {
+    margin-top:14px;
+    margin-bottom:0;
+    font-size:13px;
+    opacity:0.6;
+}
+
+/*
+end footer
+*/
+
+@media screen and (max-width: 900px){
+    .navbar .links{
+        display: none;
+    }
+
+    .logo img{
+        object-fit: contain;
+        width: 35%;
+        aspect-ratio: 3/4;
+        margin-top: 5px;
+    }
+
+    .navbar{
+        height: 90px;
+    }
+
+    .navbar .togle_btn{
+        display: block;
+    }
+
+    .dropdown{
+        display: block;
+    }
+
+
+    
+    .section1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section1 .entrenamientoImg{
+        width: 100%;
+    }
+
+    .section1 .acercaDe{
+        width: 100%;
+    }
+}
+    
+@media screen and (max-width: 576px){
+    .dropdown{
+        left: 2rem;
+        width: unset;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section2 .row{
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .row .chele{
+        padding-top: 40px;
+    }
+
+    .section3{
+        margin-top: 80px;
+    }
+
+    .section3 .metas{
+        padding-bottom: 20px;
+    }
+    .section3 .row1{
+        padding-top: 5px;
+        flex-direction: column;
+    }
+
+    .section3 .row2{
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+}
